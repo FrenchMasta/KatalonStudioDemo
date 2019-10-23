@@ -5,4 +5,11 @@
    <tag>Login</tag>
    <comment></comment>
    <testCaseGuid>72f23f11-f202-4271-86c0-0d963637fd69</testCaseGuid>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description>Flag to determine whether the browser should be closed</description>
+      <id>887f9619-11bc-4979-b027-a8d9227f8c4e</id>
+      <masked>false</masked>
+      <name>shouldCloseBrowser</name>
+   </variable>
 </TestCaseEntity>
