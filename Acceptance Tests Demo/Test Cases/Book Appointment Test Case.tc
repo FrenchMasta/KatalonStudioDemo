@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Book an appointment on the demo site</description>
+   <name>Book Appointment Test Case</name>
+   <tag>Book Appointment</tag>
+   <comment></comment>
+   <testCaseGuid>77fa1543-e097-4241-bf1c-f5e1a05ce8d2</testCaseGuid>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description>Flag to determine whether the browser should be closed</description>
+      <id>abdba4d1-3180-48d0-bc13-cd6c6d61a41c</id>
+      <masked>false</masked>
+      <name>shouldCloseBrowser</name>
+   </variable>
+</TestCaseEntity>

@@ -7,12 +7,14 @@ try {
     WebUI.openBrowser('')
 
     WebUI.navigateToUrl(GlobalVariable.BaseURL)
+	
+	WebUI.maximizeWindow()
 
     WebUI.waitForPageLoad(3)
 
     WebUI.verifyElementClickable(findTestObject('Object Repository/Login OR/BurgerIcon Side Menu'))
 
-    //WebUI.click(findTestObject('Object Repository/Login OR/BurgerIcon Side Menu'))
+    WebUI.click(findTestObject('Object Repository/Login OR/BurgerIcon Side Menu'))
 
     WebUI.verifyElementClickable(findTestObject('Object Repository/Login OR/Login Option (Side Menu)'))
 
