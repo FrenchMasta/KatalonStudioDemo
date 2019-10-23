@@ -24,4 +24,14 @@
       <initValue>'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM'</initValue>
       <name>EncryptedPasword</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>URL when booking an appointment</description>
+      <initValue>'https://katalon-demo-cura.herokuapp.com/#appointment'</initValue>
+      <name>AppointmentURL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>URL when confirming appointment</description>
+      <initValue>'https://katalon-demo-cura.herokuapp.com/appointment.php#summary'</initValue>
+      <name>AppointmentConfirmationURL</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

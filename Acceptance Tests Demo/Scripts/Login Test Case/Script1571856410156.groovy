@@ -7,10 +7,13 @@ try {
     WebUI.openBrowser('')
 
     WebUI.navigateToUrl(GlobalVariable.BaseURL)
-	
-	WebUI.maximizeWindow()
+
+    WebUI.maximizeWindow()
 
     WebUI.waitForPageLoad(3)
+
+	// Using a custom keyword to verify the current page URL
+    CustomKeywords.'VerifyPage.verifyURL'(GlobalVariable.BaseURL)
 
     WebUI.verifyElementClickable(findTestObject('Object Repository/Login OR/BurgerIcon Side Menu'))
 
@@ -35,7 +38,7 @@ catch (Exception e) {
     throw e
 } 
 finally { 
-	// Regardless of test outcome/state determine if browser should be closed
+    // Regardless of test outcome/state determine if browser should be closed
     if (shouldCloseBrowser) {
         WebUI.closeBrowser()
     }

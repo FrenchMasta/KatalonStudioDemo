@@ -29,6 +29,16 @@ public class GlobalVariable {
      */
     public static Object EncryptedPasword
      
+    /**
+     * <p>Profile default : URL when booking an appointment</p>
+     */
+    public static Object AppointmentURL
+     
+    /**
+     * <p>Profile default : URL when confirming appointment</p>
+     */
+    public static Object AppointmentConfirmationURL
+     
 
     static {
         try {
@@ -40,6 +50,8 @@ public class GlobalVariable {
             Username = selectedVariables['Username']
             Password = selectedVariables['Password']
             EncryptedPasword = selectedVariables['EncryptedPasword']
+            AppointmentURL = selectedVariables['AppointmentURL']
+            AppointmentConfirmationURL = selectedVariables['AppointmentConfirmationURL']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)

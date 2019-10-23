@@ -3,11 +3,15 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.exception.StepFailedException as StepFailedException
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import internal.GlobalVariable as GlobalVariable
 
 try {
     WebUI.callTestCase(findTestCase('Login Test Case'), [('shouldCloseBrowser') : false], FailureHandling.STOP_ON_FAILURE)
 
     WebUI.waitForPageLoad(3)
+
+	// Using a custom keyword to verify the current page URL
+    CustomKeywords.'VerifyPage.verifyURL'(GlobalVariable.AppointmentURL)
 
     WebUI.verifyElementPresent(findTestObject('Object Repository/Book Appointment OR/Header Make Appointment'), 5)
 
@@ -28,9 +32,14 @@ try {
     WebUI.setText(findTestObject('Object Repository/Book Appointment OR/Textarea Comment'), 'Comment')
 
     WebUI.click(findTestObject('Object Repository/Book Appointment OR/Button Book Appointment'))
-
-	verifyAppointmentOutput('Hongkong CURA Healthcare Center', 'Yes', 'Medicaid', 'Comment')
 	
+	WebUI.waitForPageLoad(3)
+	
+	// Using a custom keyword to verify the current page URL
+	CustomKeywords.'VerifyPage.verifyURL'(GlobalVariable.AppointmentConfirmationURL)
+
+    verifyAppointmentOutput('Hongkong CURA Healthcare Center', 'Yes', 'Medicaid', 'Comment')
+
     WebUI.click(findTestObject('Object Repository/Book Appointment OR/Button Go to Homepage'))
 }
 catch (StepFailedException sfe) {
