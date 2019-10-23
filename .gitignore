@@ -1,3 +1,5 @@
+# Java #
+
 # Compiled class file
 *.class
 
@@ -21,3 +23,16 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Katalon Studio #
+Acceptance Tests Demo/settings/internal/com.kms.katalon.composer.testcase.properties
+Acceptance Tests Demo/.settings/
+Acceptance Tests Demo/.classpath
+Acceptance Tests Demo/\.classpath
+Acceptance Tests Demo/.svn/
+Acceptance Tests Demo/*.DS_Store
+Acceptance Tests Demo/Libs/TempTestCase*.groovy
+Acceptance Tests Demo/Libs/TempTestSuite*.groovy
+Acceptance Tests Demo/bin/lib/TempTestCase*
+Acceptance Tests Demo/bin/lib/TempTestSuite*
+Acceptance Tests Demo/Reports/
